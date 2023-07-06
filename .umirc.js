@@ -24,6 +24,11 @@ export default defineConfig({
       path: '/bank',
       component: './Bank',
     },
+    {
+      name:"redpack",
+      path:"/redpack",
+      component:"./RedPack"
+    }
   ],
   npmClient: 'pnpm',
 });

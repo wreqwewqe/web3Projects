@@ -1,4 +1,4 @@
-export const bankAddress = '0x7a1446bf0ea7582fc8d558f87ac3cdd7dab6943b';
+export const bankAddress = '0x3bA50D79452cc71a71DAC77fc9BD61a7DbB00Ae4';
 export const bankAbi = [
   {
     anonymous: false,
