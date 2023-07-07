@@ -20,14 +20,19 @@ export default defineConfig({
       component: './Home',
     },
     {
-      name: 'bank',
+      name: '银行',
       path: '/bank',
       component: './Bank',
     },
     {
-      name:"redpack",
+      name:"抢红包",
       path:"/redpack",
       component:"./RedPack"
+    },
+    {
+      name:"多签存证",
+      path:"/mutiSign",
+      component:"./MutiSign"
     }
   ],
   npmClient: 'pnpm',

@@ -1,3 +1,4 @@
+
 export const bankAddress = '0x3bA50D79452cc71a71DAC77fc9BD61a7DbB00Ae4';
 export const bankAbi = [
   {
@@ -101,3 +102,56 @@ export const bankAbi = [
     type: 'function',
   },
 ];
+// SPDX-License-Identifier: GPL-3.0
+
+// pragma solidity >=0.8.2 <0.9.0;
+
+// contract Back{
+//     //用户 银行
+//     //账本
+//     uint totalAmount;
+//     //用户
+//     mapping(address=>uint) users;
+
+//     event transferLog(bool,bytes);
+
+//     modifier checkAmount(uint _amount){
+//         require(_amount>0,"amount must bigger than 0");
+//         _;
+//     }
+
+//     modifier checkBalance(){
+//         _;
+//         require(address(this).balance==totalAmount,"amount must equal with totalAmount");b 
+//     }
+
+//     function deposit(uint _amount)public payable checkBalance checkAmount(_amount){
+//         require(_amount==msg.value,"amount must equal with msg.value");
+//         users[msg.sender]+=_amount;
+//         totalAmount+=_amount;
+//     }
+
+//     function withdraw(uint _amount)public payable checkBalance{
+//         require(users[msg.sender]>=_amount,"balance not enough");
+//         (bool sent, bytes memory data)=msg.sender.call{value:_amount}("");
+//         users[msg.sender]-=_amount;
+//         totalAmount-=_amount;
+//         emit transferLog(sent,data);
+//     }
+//     //返回合约余额和账本余额
+//     function getBalance()public view  returns(uint a,uint b){
+//         return (address(this).balance,totalAmount);
+//     }
+
+
+//     function transfer(address _to,uint _amount)public{
+//         require(users[msg.sender]>=_amount,"balance not enough");
+//         users[msg.sender]-=_amount;
+//         users[_to]+=_amount;
+//     }
+
+//     //查询用户余额
+//     function getUserBalance(address _address)public view returns(uint){
+//         return users[_address];
+//     }
+// }
